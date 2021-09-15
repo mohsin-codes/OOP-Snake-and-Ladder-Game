@@ -1,25 +1,35 @@
-import utils
+import funcs
 
 
 
-class main:
+class main_func:
+
+    def continue_game():
+        user_choice = input('''
+            Press 0 to go back to main menu
+            Type 'Exit' to exit the game.
+            ''')
+        if user_choice == '0':
+            pass
+        elif user_choice.lower() == 'exit':
+            exit()
 
     def main_menu_options(self, choice):
         if choice ==  1:
-            utils.start_game()
+            funcs.start_game()
         elif choice == 2:
-            utils.rules()
+            funcs.rules()
         elif choice == 3:
-            utils.how_to_play()
+            funcs.how_to_play()
         elif choice == 4:
-            utils.settings()
+            funcs.settings()
         elif choice == 5:
-            utils.clear()
+            funcs.clear()
             exit()
 
 
     def main_menu(self):
-        utils.clear()
+        funcs.clear()
         user_choice=0
         choice = input('''
                                                     Welcome to the Snakes🐍 and Ladder Game!
@@ -41,7 +51,7 @@ class main:
             self.main_menu_options(user_choice)
         else:
             input("Wrong Input! Try Again")
-            main_menu()
+            self.main_menu()
 
-game = main()
+game = main_func()
 game.main_menu()
