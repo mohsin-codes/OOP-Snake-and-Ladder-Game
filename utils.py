@@ -1,8 +1,11 @@
 import os
+from snakes import Snakes
+from ladder import Ladder
+# import main
 
 
 clear = lambda: os.system('cls')
-
+#TODO : Fix the main_menu() part
 def continue_game():
     user_choice = input('''
         Press 0 to go back to main menu
@@ -10,7 +13,7 @@ def continue_game():
         ''')
     if user_choice == '0':
         pass
-        # main_menu()
+        # main.main_func.main_menu()
     elif user_choice.lower() == 'exit':
         exit()
 
@@ -25,8 +28,10 @@ def settings():
         Enter your choice - \
         ''')
         if setting_input == "1":
-            pass
-            # change_snake_pos()
+            snake1 = Snakes()
+            snake1.snakes_list()
+            snake1.snakes_add()
+            # snake1.snakes_list()
         elif setting_input == "2":
             pass
             # change_ladder_pos()

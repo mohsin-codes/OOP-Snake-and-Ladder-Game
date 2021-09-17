@@ -1,4 +1,5 @@
-import utils
+from os import startfile
+import utils, game
 
 
 
@@ -16,7 +17,7 @@ class main_func:
 
     def main_menu_options(self, choice):
         if choice ==  1:
-            utils.start_game()
+            game.start_game()
         elif choice == 2:
             utils.rules()
         elif choice == 3:
@@ -53,5 +54,5 @@ class main_func:
             input("Wrong Input! Try Again")
             self.main_menu()
 
-game = main_func()
-game.main_menu()
+start = main_func()
+start.main_menu()

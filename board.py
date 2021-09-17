@@ -8,4 +8,3 @@ class Board:
         self.player1 = players.Player()
         self.player2 = players.Player()
 
-    
