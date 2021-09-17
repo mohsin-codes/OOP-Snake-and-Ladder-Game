@@ -3,6 +3,16 @@ import os
 
 clear = lambda: os.system('cls')
 
+def continue_game():
+    user_choice = input('''
+        Press 0 to go back to main menu
+        Type 'Exit' to exit the game.
+        ''')
+    if user_choice == '0':
+        pass
+        # main_menu()
+    elif user_choice.lower() == 'exit':
+        exit()
 
 
 def settings():

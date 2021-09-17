@@ -1,4 +1,4 @@
-import funcs
+import utils
 
 
 
@@ -16,20 +16,20 @@ class main_func:
 
     def main_menu_options(self, choice):
         if choice ==  1:
-            funcs.start_game()
+            utils.start_game()
         elif choice == 2:
-            funcs.rules()
+            utils.rules()
         elif choice == 3:
-            funcs.how_to_play()
+            utils.how_to_play()
         elif choice == 4:
-            funcs.settings()
+            utils.settings()
         elif choice == 5:
-            funcs.clear()
+            utils.clear()
             exit()
 
 
     def main_menu(self):
-        funcs.clear()
+        utils.clear()
         user_choice=0
         choice = input('''
                                                     Welcome to the Snakes🐍 and Ladder Game!
