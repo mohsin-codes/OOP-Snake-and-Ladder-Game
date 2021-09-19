@@ -1,15 +1,16 @@
-from snakes import Snakes
-from ladder import Ladder
-from dice import Dice
-from players import Player
+import game
 import constant
 
+
 class Board:
+
+
+
     def check_win(self, player_name, player_pos):
-        dice_face = self.dice1.get_dice_face(player_name)
+        dice_face = game.dice1.get_dice_face(player_name)
         player_pos = player_pos + dice_face
-        player_pos = self.snake1.snake_bite(player_name, player_pos)
-        player_pos = self.ladder1.ladder_climb(player_name, player_pos)
+        player_pos = game.snake1.snake_bite(player_name, player_pos)
+        player_pos = game.ladder1.ladder_climb(player_name, player_pos)
         if player_pos == constant.HOME:
             print(f"\t\t\t\t\tCongrats! {player_name} won!🎊🎉🎇")
             exit()

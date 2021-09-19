@@ -12,5 +12,9 @@ class Game:
         name, name2 = Player.get_player_name(self)
         self.player1 = Player(name)
         self.player2 = Player(name2)
-        board = Board()
+        self.board = Board()
 
+    def start_game(self):
+        while True:
+            self.board.final_player_pos(self.player1.pos, self.player2.name)
+            self.board.final_player_pos(self.player1.pos, self.player2.name)
