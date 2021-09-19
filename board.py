@@ -1,10 +1,14 @@
-import snakes, ladder, dice, players
+from snakes import Snakes
+from ladder import Ladder
+from dice import Dice
+from players import Player
 
 class Board:
     def __init__(self):
-        self.snake1 = snakes.Snakes()
-        self.ladder1 = ladder.Ladder()
-        self.dice1 = dice.Dice()
-        self.player1 = players.Player()
-        self.player2 = players.Player()
+        self.snake1 = Snakes()
+        self.ladder1 = Ladder()
+        self.dice1 = Dice()
+        name, name2 = Player.get_player_name(self)
+        self.player1 = Player(name)
+        self.player2 = Player(name2)
 

@@ -1,4 +1,3 @@
-from typing_extensions import TypeAlias
 from ladder import Ladder
 
 class Snakes:

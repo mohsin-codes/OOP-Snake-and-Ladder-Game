@@ -1,6 +1,5 @@
-from os import startfile
-import utils, game
-
+import utils
+from game import Game
 
 
 class main_func:
@@ -17,6 +16,7 @@ class main_func:
 
     def main_menu_options(self, choice):
         if choice ==  1:
+            game = Game()
             game.start_game()
         elif choice == 2:
             utils.rules()
