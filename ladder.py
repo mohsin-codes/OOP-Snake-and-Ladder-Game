@@ -22,10 +22,14 @@ class Ladder:
         for key, val in self.ladders_dict.items():
             print(f"{key} : {val}")
 
-# ladder1 = Ladder()
-# Ladder.ladder_list(ladder1)
-# Ladder.ladder_add(ladder1)
-# Ladder.ladder_list(ladder1)
-# Ladder.ladder_del(ladder1)
-# Ladder.ladder_list(ladder1)
+    def ladder_climb(self, player_name, player_pos):
+        for key, val in self.ladder_list.items():
+            if player_pos == int(key):
+                print(f"\t\t\t\t\tGreat!!😁 {player_name} found a ladder😎. Move up to {val}")
+                player_pos = int(val)
+            else:
+                continue
+        return player_pos
+
+
 

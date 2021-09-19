@@ -1,6 +1,7 @@
 import os
 from snakes import Snakes
 from ladder import Ladder
+import time
 # import main
 
 
@@ -81,3 +82,10 @@ def how_to_play():
     5. The first player to get to the space that says 'home' is the winner.
     ''')
     continue_game()
+
+def dots():
+    dices = "🎲🎲🎲🎲🎲"
+    for i in range(len(dices)):
+        print(dices[i],sep="", end="", flush=True)
+        time.sleep(0.3)
+    print()

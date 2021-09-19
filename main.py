@@ -17,7 +17,6 @@ class main_func:
     def main_menu_options(self, choice):
         if choice ==  1:
             game = Game()
-            game.start_game()
         elif choice == 2:
             utils.rules()
         elif choice == 3:
