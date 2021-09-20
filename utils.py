@@ -2,6 +2,7 @@ import os
 from snakes import Snakes
 from ladder import Ladder
 import time
+# from main import main_func
 
 
 clear = lambda: os.system('cls')
@@ -13,7 +14,7 @@ def continue_game():
         ''')
     if user_choice == '0':
         pass
-        # main.main_func.main_menu()
+        # main_func.main_menu()
     elif user_choice.lower() == 'exit':
         exit()
 
