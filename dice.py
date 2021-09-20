@@ -9,7 +9,7 @@ class Dice:
 
     def __init__(self):
         pass
-
+    
     def get_dice_face():
         print("\t\t\t\t\tRolling the dice", end="")
         utils.dots()

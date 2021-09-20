@@ -37,11 +37,10 @@ class Snakes:
             mouth_new = mouth_new_in
             tail_new = tail_new_in
             temp = False
-        
         self.snakes_dict[str(mouth_new)] = tail_new
-
+        
     def snake_bite(self, player_name, player_pos):
-        for key, val in self.snakes_list.items():
+        for key, val in self.snakes_dict.items():
             if player_pos == int(key):
                 print(f"\t\t\t\t\tOh no!😯 {player_name} got bitten by a snake🐍😔. Go back to {val}")
                 player_pos = int(val)
