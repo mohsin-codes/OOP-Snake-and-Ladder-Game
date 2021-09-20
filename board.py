@@ -11,7 +11,7 @@ class Board:
         dice_face = game.Game.dice_val()
         print(f"\t\t\t\t\tThe dice shows {dice_face}")
         player_pos = player_pos + dice_face
-        player_pos = game.Game.get_snake_bite(player_name, player_pos)
+        player_pos = Snakes.snake_bite(player_name, player_pos)
         player_pos = Ladder.ladder_climb(player_name, player_pos)
         if player_pos == constant.HOME:
             utils.clear()
@@ -31,5 +31,3 @@ class Board:
         input("\t\t\t\t\tPress 'Enter' to continue")
         print("\n\n\n\n")
         return player_pos
-
-        
