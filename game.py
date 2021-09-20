@@ -20,7 +20,7 @@ class Game:
     def start_game(self):
         while True:
             utils.clear()
-            self.board.final_player_pos(self.player1.pos, self.player1.name)
-            self.board.final_player_pos(self.player2.pos, self.player2.name)
+            self.player1.pos = self.board.final_player_pos(self.player1.pos, self.player1.name)
+            self.player2.pos = self.board.final_player_pos(self.player2.pos, self.player2.name)
 
 
