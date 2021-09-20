@@ -2,7 +2,6 @@ import os
 from snakes import Snakes
 from ladder import Ladder
 import time
-# import main
 
 
 clear = lambda: os.system('cls')

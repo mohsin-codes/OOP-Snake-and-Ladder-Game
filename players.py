@@ -9,6 +9,6 @@ class Player:
 
     def get_player_name(self):
         utils.clear()
-        name = input("Enter Player 1 Name : ")
-        name2 = input("Enter Player 2 Name : ")
+        name = input("\t\t\t\t\tEnter Player 1 Name : ")
+        name2 = input("\t\t\t\t\tEnter Player 2 Name : ")
         return name, name2
