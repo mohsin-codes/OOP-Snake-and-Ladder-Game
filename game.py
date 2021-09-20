@@ -22,6 +22,4 @@ class Game:
             utils.clear()
             self.player1.pos = self.board.final_player_pos(self.player1.pos, self.player1.name)
             self.player2.pos = self.board.final_player_pos(self.player2.pos, self.player2.name)
-    
-    
 
