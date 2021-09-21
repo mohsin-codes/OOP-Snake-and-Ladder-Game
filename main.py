@@ -48,6 +48,8 @@ class main_func:
 
 
 if __name__ == "__main__":
+    print("\n\n\n\n\n\t\t\t\t\tPlease make the window full screen to enjoy the game.")
+    time.sleep(3)
     choice = animation.main_func()
     if choice.lower() == 's':
         utils.clear()

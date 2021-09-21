@@ -16,8 +16,9 @@ def command_input():
     return command
 
 def main_func():
+    os.system("cls")
     while True:
-        for i in range(5):
+        for i in range(4):
             for frame in frames:
                 print("".join(frame))
                 time.sleep(0.15)
