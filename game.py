@@ -14,12 +14,14 @@ class Game:
         self.player2 = Player(name2)
         self.board = Board()
 
+
     def dice_val():
         return Dice.get_dice_face()
 
     def start_game(self):
         while True:
             utils.clear()
+            utils.display_pos(self.player1.name, self.player2.name, self.player1.pos, self.player2.pos)
             self.player1.pos = self.board.final_player_pos(self.player1.pos, self.player1.name)
             self.player2.pos = self.board.final_player_pos(self.player2.pos, self.player2.name)
 

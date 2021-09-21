@@ -8,18 +8,30 @@ import time
 clear = lambda: os.system('cls')
 #TODO : Fix the main_menu() part
 
+def display_pos(player1_name, player2_name, player1_pos, player2_pos):
+    print(f'''
+        \t\t\t{player1_name}\t\t\t\t\t\t\t\t{player2_name}
+        \t\t\t{player1_pos}\t\t\t\t\t\t\t\t{player2_pos}
+    ''')
+
 def continue_game():
-    user_choice = input('''
-        Press 0 to go back to main menu
-        Type 'Exit' to exit the game.
-        ''')
-    if user_choice == '0':
-        clear()
-        import main
-        s1 = main.main_func()
-        s1.main_menu()
-    elif user_choice.lower() == 'exit':
-        exit()
+    while True:
+        user_choice = input('''
+            Press 0 to go back to main menu
+            Type 'Exit' to exit the game.
+            ''')
+        if user_choice == '0':
+            clear()
+            import main
+            s1 = main.main_func()
+            s1.main_menu()
+        elif user_choice.lower() == 'exit':
+            exit()
+        else:
+            clear()
+            print("\t\t\tWrong input. Try Again!!")
+            time.sleep(2)
+            clear()
 
 
 def settings():
