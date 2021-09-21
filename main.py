@@ -1,18 +1,10 @@
+from os import name
 import utils
 from game import Game
-
+import time
+import animation
 
 class main_func:
-
-    def continue_game():
-        user_choice = input('''
-            Press 0 to go back to main menu
-            Type 'Exit' to exit the game.
-            ''')
-        if user_choice == '0':
-            pass
-        elif user_choice.lower() == 'exit':
-            exit()
 
     def main_menu_options(self, choice):
         if choice ==  1:
@@ -30,29 +22,40 @@ class main_func:
 
 
     def main_menu(self):
-        utils.clear()
         user_choice=0
-        choice = input('''
-                                                    Welcome to the Snakes🐍 and Ladder Game!
-                                                        
-                                                        Press 1 - Start the game ▶
-                                                        Press 2 - Rules📕
-                                                        Press 3 - How to Play ❓ 
-                                                        Press 4 - Settings⚙
-                                                        Press 5 - Exit🚪
-                                                        Enter your choice - \
-        ''')
-        try:
-            user_choice = int(choice)
-        except ValueError as ve:
-            print("\n\n")
-            input("\t\t\t\t\t\tYou are trying to input wrong value. Try again by pressing 'Enter'")
-        
-        if user_choice == 1 or 2 or 3 or 4 or 5: 
-            self.main_menu_options(user_choice)
-        else:
-            input("Wrong Input! Try Again")
-            self.main_menu()
+        while True:
+            choice = input('''
+                                                        Welcome to the Snakes🐍 and Ladder Game!
+                                                            
+                                                            Press 1 - Start the game ▶
+                                                            Press 2 - Rules📕
+                                                            Press 3 - How to Play ❓ 
+                                                            Press 4 - Settings⚙
+                                                            Press 5 - Exit🚪
+                                                            Enter your choice - \
+            ''')
+            try:
+                user_choice = int(choice)
+            except ValueError as ve:
+                print("\n\n")
+                input("\t\t\t\t\t\tYou are trying to input wrong value. Try again by pressing 'Enter'")     
+            if user_choice == 1 or 2 or 3 or 4 or 5: 
+                self.main_menu_options(user_choice)
+            else:
+                input("Wrong Input! Try Again")
+                
 
-start = main_func()
-start.main_menu()
+
+
+if __name__ == "__main__":
+    choice = animation.main_func()
+    if choice.lower() == 's':
+        utils.clear()
+        start = main_func()
+        start.main_menu()
+    elif choice.lower() == 'e':
+        utils.clear()
+        exit()
+    else:
+        print("Try Again!")
+        utils.clear()

@@ -7,14 +7,17 @@ import time
 
 clear = lambda: os.system('cls')
 #TODO : Fix the main_menu() part
+
 def continue_game():
     user_choice = input('''
         Press 0 to go back to main menu
         Type 'Exit' to exit the game.
         ''')
     if user_choice == '0':
-        pass
-        # main_func.main_menu()
+        clear()
+        import main
+        s1 = main.main_func()
+        s1.main_menu()
     elif user_choice.lower() == 'exit':
         exit()
 
@@ -23,22 +26,22 @@ def settings():
     clear()
     while True:
         setting_input = input(f''' 
-        Press 1 - Change Snakes Position
-        Press 2 - Change Ladder Position
-        Press 3 - Go Back
-        Enter your choice - \
+        \t\t\t\t\tPress 1 - Change Snakes Position
+        \t\t\t\t\tPress 2 - Change Ladder Position
+        \t\t\t\t\tPress 3 - Go Back
+        \t\t\t\t\tEnter your choice - \
         ''')
         if setting_input == "1":
             snake1 = Snakes()
             snake1.snakes_list()
             snake1.snakes_add()
-            # snake1.snakes_list()
         elif setting_input == "2":
-            pass
-            # change_ladder_pos()
+            ladder1 = Ladder()
+            ladder1.ladder_list()
+            ladder1.ladder_add()
         elif setting_input == "3":
-            pass
-            # continue_game()
+            clear()
+            continue_game()
         else:
             input("\n\tWrong input. Please Try Again!")
             clear()
